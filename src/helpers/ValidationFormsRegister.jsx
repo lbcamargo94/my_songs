@@ -24,4 +24,4 @@ export const nameValidation = (name) => {
   if (name.length < MIN_LENGTH_NAME) return false;
   if (name.length > MAX_LENGTH_NAME) return false;
   return true;
-}
+};
