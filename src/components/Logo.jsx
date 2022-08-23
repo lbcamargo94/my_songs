@@ -24,10 +24,11 @@ const Box = styled.div`
 `
 
 const TextPrimary = styled.h1`
-  import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
   font-size: 2.5rem;
   font-family: 'Fascinate Inline', cursive;
-  color: #01a101;
+  color: #4DE649;
+  filter: brightness(1);
 `
 
 const TextSecundary = styled.h1`

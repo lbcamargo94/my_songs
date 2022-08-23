@@ -56,8 +56,8 @@ const Container = styled.section`
 `
 
 const BoxImage = styled.div`
-  align-itens: center;
-  border-radios: 1rem;
+  align-items: center;
+  border-radius: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -71,8 +71,8 @@ const BoxImage = styled.div`
 `
 
 const BoxIntro = styled.div`
-  align-itens: center;
-  border-radios: 1rem;
+  align-items: center;
+  border-radius: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-betwen;
@@ -92,14 +92,15 @@ const TextIntro = styled.p`
 
 const BoxButtons = styled.div`
   display: flex;
-  align-itens: center;
+  align-items: center;
   justify-content: center;
   margin: 0 auto;
 `
 
 const Button = styled.button`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  background-color: #01a101;
+  /* background-color: #01a101; */
+  background-color: #4DE649;
   border-radius: 0.5rem;
   border: 0.1rem outset;
   color: #f0f8ff;
