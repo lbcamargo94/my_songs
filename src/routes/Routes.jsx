@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
-import Home from '../page/Home';
-import Register from '../page/Register';
+import Home from '../pages/Home';
+import Register from '../pages/Register';
 
 export default function NavigationRoutes() {
   return (
