@@ -6,6 +6,13 @@ import React, {
 // import react-router-dom
 import { useNavigate } from 'react-router-dom';
 
+// Import forms validation
+import {
+  emailValidation,
+  passwordValidation,
+  nameValidation,
+} from '../helpers/validationRegisterForms';
+
 // import styled component
 import { Content } from '../styles/StyledFormsRegister';
 
