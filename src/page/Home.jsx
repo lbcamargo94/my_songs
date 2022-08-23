@@ -50,6 +50,8 @@ const Container = styled.section`
   flex-direction: column;
   height: 100%;
   justify-content: center;
+  max-height: 900px;
+  max-width: 600px;
   width: 100%;
 `
 
@@ -58,11 +60,13 @@ const BoxImage = styled.div`
   border-radios: 1rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 1rem;
+  width: 80%;
 
   img {
-    max-width: 25%
+    max-width: 50%
   }
 `
 
@@ -74,7 +78,7 @@ const BoxIntro = styled.div`
   justify-content: space-betwen;
   margin-top: 3rem;
   margin: 1rem;
-  max-width: 75%;
+  max-width: 80%;
   padding: 2rem;
   min-height: 200px;
 `
