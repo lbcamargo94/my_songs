@@ -103,7 +103,9 @@ const Button = styled.button`
   background-color: #4DE649;
   border-radius: 0.5rem;
   border: 0.1rem outset;
-  color: #f0f8ff;
+  /* color: #f0f8ff; */
+  color: #141a29;
+  letter-spacing: 0.15em;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 1em;
