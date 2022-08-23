@@ -46,8 +46,10 @@ npm install
 Technologies used in the project:
 
 * React.js
-* HTML
-* CSS
+* React Router Dom v6
+* Styled-Components
+* Axios
+* Eslint
 
 <!-- ========== License ========== -->
 <h2>🛡️ License:</h2>
