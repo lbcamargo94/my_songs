@@ -1,20 +1,17 @@
-import React, {
-  useState,
-  useEffect,
-} from 'react';
+import React, { useState, useEffect } from "react";
 
 // import context/provider
-import { useUpdateContext } from '../utils/provider';
+import { useUpdateContext } from "../utils/provider";
 
 // import react-router-dom
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 // Import forms validation
 import {
   emailValidation,
   passwordValidation,
   nameValidation,
-} from '../helpers/ValidationFormsRegister';
+} from "../helpers/ValidationFormsRegister";
 
 // import styled component
 import {
@@ -25,15 +22,15 @@ import {
   InputGroup,
   Link,
   Text,
-} from '../styles/StyledFormsRegister';
+} from "../styles/StyledFormsRegister";
 
 export default function FormsRegister() {
   // States
   // const [showPassword, setShowPassword] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [validForms, setValidForms] = useState(false);
   const [validName, setValidName] = useState(false);
 
@@ -43,12 +40,10 @@ export default function FormsRegister() {
   // Save newUser in Context
   const { data, setData } = useUpdateContext();
 
-  const addNewUser = (
-    firstName, lastName, email, password
-    ) => {
-  let newUser = { firstName, lastName, email, password };
+  const addNewUser = (firstName, lastName, email, password) => {
+    let newUser = { firstName, lastName, email, password };
     setData([...data, newUser]);
-    navigate('/login');
+    navigate("/login");
   };
 
   useEffect(() => {
@@ -56,11 +51,11 @@ export default function FormsRegister() {
       let validName = nameValidation(firstName);
       let validPassword = passwordValidation(password);
       let validEmail = emailValidation(email);
-      let arrValidation = [validName, validPassword, validEmail]
-      setValidForms(!arrValidation.every(elemnt => elemnt == true))
+      let arrValidation = [validName, validPassword, validEmail];
+      setValidForms(!arrValidation.every((elemnt) => elemnt == true));
     }
-    validationFields(firstName, password, email)
-  }, [firstName, password, email])
+    validationFields(firstName, password, email);
+  }, [firstName, password, email]);
 
   return (
     <Content>
@@ -71,13 +66,9 @@ export default function FormsRegister() {
           type="text"
           name="first_name"
           autocomplete="off"
-          onChange={
-            ({target}) => setFirstName(target.value)
-          }
+          onChange={({ target }) => setFirstName(target.value)}
         />
-        <FormsLabel>
-          First Name
-        </FormsLabel>
+        <FormsLabel>First Name</FormsLabel>
       </InputGroup>
       {/* input Last Name */}
       <InputGroup>
@@ -86,13 +77,9 @@ export default function FormsRegister() {
           ype="text"
           name="last_name"
           autocomplete="off"
-          onChange={
-            ({target}) => setLastName(target.value)
-          }
+          onChange={({ target }) => setLastName(target.value)}
         />
-        <FormsLabel>
-          Last Name
-        </FormsLabel>
+        <FormsLabel>Last Name</FormsLabel>
       </InputGroup>
       {/* input Email addres */}
       <InputGroup>
@@ -101,13 +88,9 @@ export default function FormsRegister() {
           type="email"
           name="email"
           autocomplete="off"
-          onChange={
-            ({target}) => setEmail(target.value)
-          }
+          onChange={({ target }) => setEmail(target.value)}
         />
-        <FormsLabel>
-          Email addres
-        </FormsLabel>
+        <FormsLabel>Email addres</FormsLabel>
       </InputGroup>
       {/* input Password */}
       <InputGroup>
@@ -116,17 +99,13 @@ export default function FormsRegister() {
           type="password"
           name="password"
           autocomplete="off"
-          onChange={
-            ({target}) => setPassword(target.value)
-          }
+          onChange={({ target }) => setPassword(target.value)}
         />
-        <FormsLabel>
-          Password
-        </FormsLabel>
+        <FormsLabel>Password</FormsLabel>
       </InputGroup>
       {/* button Sign Up */}
       <Button
-        disabled={ validForms }
+        disabled={validForms}
         onClick={() => addNewUser(firstName, lastName, email, password)}
       >
         Sign Up
@@ -135,11 +114,7 @@ export default function FormsRegister() {
       <Text>
         Already a user?
         {/* link to Login page */}
-        <Link
-          onClick={() => navigate('/login')}
-        >
-          Ligon
-        </Link>
+        <Link onClick={() => navigate("/login")}>Ligon</Link>
       </Text>
     </Content>
   );
