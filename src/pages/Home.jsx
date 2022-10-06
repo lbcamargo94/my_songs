@@ -1,14 +1,14 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // import image
-import HeadPhonePink from '../assets/images/head-phone-01.jpg';
-import HeadPhoneBlue from '../assets/images/head-phone-02.jpg';
-import HeadPhoneYellow from '../assets/images/head-phone-03.jpg';
-import HeadPhoneGreen from '../assets/images/head-phone-04.jpg';
+import HeadPhonePink from "../assets/images/head-phone-01.jpg";
+import HeadPhoneBlue from "../assets/images/head-phone-02.jpg";
+import HeadPhoneYellow from "../assets/images/head-phone-03.jpg";
+import HeadPhoneGreen from "../assets/images/head-phone-04.jpg";
 
 // impport component
-import Logo from '../components/Logo';
+import Logo from "../components/Logo";
 
 // import Styled Components
 import {
@@ -18,10 +18,10 @@ import {
   TextIntro,
   BoxButtons,
   Button,
-} from '../styles/StyledHomePage';
+} from "../styles/StyledHomePage";
 
 export default function Home() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -33,21 +33,14 @@ export default function Home() {
         <img src={HeadPhoneGreen} alt="HeadPhoneGreen" />
       </BoxImage>
       <BoxIntro>
-        <TextIntro >
-          My Songs, an application capable of playing songs from the most varied bands and artists, creating a list of favorite songs and editing the profile of the user logged in.
+        <TextIntro>
+          My Songs, an application capable of playing songs from the most varied bands and artists,
+          creating a list of favorite songs and editing the profile of the user logged in.
         </TextIntro>
       </BoxIntro>
       <BoxButtons>
-        <Button
-          onClick={() => navigate("/login")}
-        >
-          Sign In
-        </Button>
-        <Button
-          onClick={() => navigate("/register")}
-        >
-          Sign Up
-        </Button>
+        <Button onClick={() => navigate("/login")}>Sign In</Button>
+        <Button onClick={() => navigate("/register")}>Sign Up</Button>
       </BoxButtons>
     </Container>
   );

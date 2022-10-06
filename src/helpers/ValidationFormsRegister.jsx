@@ -17,7 +17,7 @@ export const emailValidation = (email) => {
 export const passwordValidation = (password) => {
   if (password.length < MIN_LENGTH_PASSWORD) return false;
   if (password.length > MAX_LENGTH_PASSWORD) return false;
-  return true
+  return true;
 };
 
 export const nameValidation = (name) => {

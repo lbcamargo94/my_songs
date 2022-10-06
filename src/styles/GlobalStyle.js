@@ -24,4 +24,4 @@ export const GlobalStyle = createGlobalStyle`
     justify-content: center;
     width: 100%;
   }
-`
+`;

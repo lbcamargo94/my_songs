@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Content = styled.section`
   display: flex;
@@ -7,4 +7,4 @@ export const Content = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-`
+`;
