@@ -53,12 +53,10 @@ export const BoxButtons = styled.div`
 `
 
 export const Button = styled.button`
-  /* background-color: #01a101; */
-  /* color: #f0f8ff; */
-  background-color: #4DE649;
+  background-color: #01a101;
   border-radius: 0.5rem;
   border: 0.1rem outset;
-  color: #141a29;
+  color: #f0f8ff;
   font-family: 'Poppins', sans-serif;
   font-size: 1em;
   font-weight: 900;

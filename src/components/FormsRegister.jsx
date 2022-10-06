@@ -35,6 +35,7 @@ export default function FormsRegister() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [validForms, setValidForms] = useState(false);
+  const [validName, setValidName] = useState(false);
 
   // React Touter Dom useNavigate
   let navigate = useNavigate();

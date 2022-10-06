@@ -8,11 +8,10 @@ export default function Logo() {
   return (
     <Box>
       <TextPrimary primaryColor='green'>
-        Trybe
+        My
       </TextPrimary>
-
       <TextPrimary primaryColor='white'>
-        Tunes
+        Songs
       </TextPrimary>
     </Box>
   );

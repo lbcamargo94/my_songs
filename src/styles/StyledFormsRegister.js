@@ -48,10 +48,10 @@ export const FormsLabel = styled.label`
 export const Button = styled.button`
   align-items: center;
   display: flex;
-  background-color: #4DE649;
+  background-color: #01a101;
   border-radius: 0.5rem;
   border: 0.1rem outset;
-  color: #1a202c;
+  color: #f0f8ff;
   font-family: 'Poppins', sans-serif;
   font-size: 1em;
   font-weight: 900;
