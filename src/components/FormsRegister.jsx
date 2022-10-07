@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // import context/provider
+import { useNavigate } from "react-router-dom";
 import { useUpdateContext } from "../utils/provider";
 
 // import react-router-dom
-import { useNavigate } from "react-router-dom";
 
 // Import forms validation
 import {
@@ -31,31 +31,35 @@ export default function FormsRegister() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [validForms, setValidForms] = useState(false);
-  const [validName, setValidName] = useState(false);
+  // const [showAlert, setShowAlert] = useState(false);
 
   // React Touter Dom useNavigate
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   // Save newUser in Context
   const { data, setData } = useUpdateContext();
 
   const addNewUser = (firstName, lastName, email, password) => {
-    let newUser = { firstName, lastName, email, password };
+    const newUser = { firstName, lastName, email, password };
     setData([...data, newUser]);
-    navigate("/login");
   };
 
-  useEffect(() => {
-    function validationFields(firstName, password, email) {
-      let validName = nameValidation(firstName);
-      let validPassword = passwordValidation(password);
-      let validEmail = emailValidation(email);
-      let arrValidation = [validName, validPassword, validEmail];
-      setValidForms(!arrValidation.every((elemnt) => elemnt == true));
+  const handleValidations = (firstName, password, email) => {
+    const isValidName = nameValidation(firstName);
+    const isValidPassword = passwordValidation(password);
+    const isValidEmail = emailValidation(email);
+    const arrValidation = [isValidName, isValidPassword, isValidEmail];
+    return arrValidation.every((el) => el === true);
+  };
+
+  const handleSubmit = () => {
+    const validSubmit = handleValidations(firstName, password, email);
+    // eslint-disable-next-line no-console
+    console.log("handleSubmit", validSubmit);
+    if (validSubmit) {
+      addNewUser(firstName, lastName, email, password);
     }
-    validationFields(firstName, password, email);
-  }, [firstName, password, email]);
+  };
 
   return (
     <Content>
@@ -104,12 +108,7 @@ export default function FormsRegister() {
         <FormsLabel>Password</FormsLabel>
       </InputGroup>
       {/* button Sign Up */}
-      <Button
-        disabled={validForms}
-        onClick={() => addNewUser(firstName, lastName, email, password)}
-      >
-        Sign Up
-      </Button>
+      <Button onClick={() => handleSubmit()}>Sign Up</Button>
       {/* span */}
       <Text>
         Already a user?
