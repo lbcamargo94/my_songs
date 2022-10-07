@@ -34,8 +34,9 @@ export default function Home() {
       </BoxImage>
       <BoxIntro>
         <TextIntro>
-          My Songs, an application capable of playing songs from the most varied bands and artists,
-          creating a list of favorite songs and editing the profile of the user logged in.
+          My Songs, an application capable of playing songs from the most varied
+          bands and artists, creating a list of favorite songs and editing the
+          profile of the user logged in.
         </TextIntro>
       </BoxIntro>
       <BoxButtons>

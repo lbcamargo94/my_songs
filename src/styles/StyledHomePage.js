@@ -65,10 +65,12 @@ export const Button = styled.button`
   margin: 1rem;
   padding: 0.5rem 1rem;
   transition-duration: 1s;
-  transition-property: border-top, border-left, border-bottom, border-right, box-shadow;
+  transition-property: border-top, border-left, border-bottom, border-right,
+    box-shadow;
   width: 7.5rem;
 
   &:hover {
-    box-shadow: #01a101 0.25rem 0.25rem, #01a101aa 0.5rem 0.5rem, #01a10155 0.75rem 0.75rem;
+    box-shadow: #01a101 0.25rem 0.25rem, #01a101aa 0.5rem 0.5rem,
+      #01a10155 0.75rem 0.75rem;
   }
 `;

@@ -1,12 +1,22 @@
-import React, { useContext, useState } from "react";
+import React, { useMemo, useContext, useState } from "react";
 import PropTypes from "prop-types";
 import TunesContext from "../context";
 
-export const TunesProvider = ({ children }) => {
+export function TunesProvider({ children }) {
   const [data, setData] = useState([]);
 
-  return <TunesContext.Provider value={{ data, setData }}>{children}</TunesContext.Provider>;
-};
+  const value = useMemo(
+    () => ({
+      data,
+      setData,
+    }),
+    [data],
+  );
+
+  return (
+    <TunesContext.Provider value={value}>{children}</TunesContext.Provider>
+  );
+}
 
 export const useUpdateContext = () => useContext(TunesContext);
 
