@@ -42,7 +42,9 @@ export default function FormsRegister() {
     const newUser = { firstName, lastName, email, password };
     const userExists = data.some((user) => user.email === email);
     if (userExists) {
-      return setAlertMessage("E-mail já cadastrado, informe um e-mail valido!");
+      return setAlertMessage(
+        "E-mail already registered, enter a valid e-mail!",
+      );
     }
     setData([...data, newUser]);
     return navigate("/login");
@@ -52,16 +54,16 @@ export default function FormsRegister() {
   const handleValidations = (firstName, password, email) => {
     const isValidName = nameValidation(firstName);
     if (!isValidName) {
-      setAlertMessage("O campo nome deve ter entre 3 e 12 caracteres");
+      setAlertMessage("The name field must be between 3 and 12 characters");
     }
     const isValidPassword = passwordValidation(password);
     if (!isValidPassword) {
-      setAlertMessage("O campo password deve ter entre 6 e 12 caracteres");
+      setAlertMessage("The password field must be between 6 and 12 characters");
     }
     const isValidEmail = emailValidation(email);
     if (!isValidEmail) {
       setAlertMessage(
-        "O campo email deve atender o padrão de exemplo email@gamil.com",
+        "The email field must meet the example pattern email@gamil.com",
       );
     }
     const arrValidation = [isValidName, isValidPassword, isValidEmail];
@@ -110,7 +112,7 @@ export default function FormsRegister() {
           autocomplete="off"
           onChange={({ target }) => setEmail(target.value)}
         />
-        <FormsLabel>Email addres *</FormsLabel>
+        <FormsLabel>E-mail addres *</FormsLabel>
       </InputGroup>
       {/* input Password */}
       <InputGroup>
@@ -123,11 +125,11 @@ export default function FormsRegister() {
         />
         <FormsLabel>Password *</FormsLabel>
       </InputGroup>
-      {!validForms && <span> {alertMessage} </span>}
+      {!validForms && <Text textColor="red"> {alertMessage} </Text>}
       {/* button Sign Up */}
       <Button onClick={() => handleSubmit()}>Sign Up</Button>
       {/* span */}
-      <Text>
+      <Text textColor="white">
         Already a user?
         {/* link to Login page */}
         <Link onClick={() => navigate("/login")}>Ligon</Link>
