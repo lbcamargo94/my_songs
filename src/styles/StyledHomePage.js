@@ -6,9 +6,16 @@ export const Container = styled.section`
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  max-height: 900px;
   max-width: 600px;
   width: 100%;
+`;
+
+export const BoxLogo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 10rem;
 `;
 
 export const BoxImage = styled.div`
@@ -20,10 +27,10 @@ export const BoxImage = styled.div`
   justify-content: center;
   margin: 1rem;
   width: 80%;
+`;
 
-  img {
-    max-width: 50%;
-  }
+export const HomeImage = styled.img`
+  max-width: 50%;
 `;
 
 export const BoxIntro = styled.div`
@@ -33,16 +40,21 @@ export const BoxIntro = styled.div`
   flex-direction: row;
   justify-content: space-betwen;
   margin-top: 3rem;
-  margin: 1rem;
-  max-width: 80%;
+  margin: 1rem 0;
+  max-width: 90%;
   min-height: 200px;
-  padding: 2rem;
+  padding: 1rem;
 `;
 
 export const TextIntro = styled.p`
   font-family: "Oxygen", sans-serif;
   font-size: 1.5rem;
-  height: 100%;
+  font-weight: 200;
+  width: 100%;
+  text-indent: 1rem;
+  text-align: center;
+  word-spacing: 0.125rem;
+  line-height: 2rem;
 `;
 
 export const BoxButtons = styled.div`

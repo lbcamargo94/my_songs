@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Box = styled.div`
   align-items: center;
   display: flex;
-  height: 100%;
+  margin: 2rem auto;
   justify-content: center;
   width: 100%;
 `;

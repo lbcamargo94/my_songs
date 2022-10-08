@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 // import context/provider
 import { useNavigate } from "react-router-dom";
-import { useUpdateContext } from "../utils/provider";
 
 // Import forms validation
 import {
@@ -21,6 +20,7 @@ import {
   Link,
   Text,
 } from "../styles/StyledFormsRegister";
+import { useUpdateContext } from "../utils/provider";
 
 export default function FormsRegister() {
   // States

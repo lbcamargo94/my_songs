@@ -18,6 +18,7 @@ import {
   TextIntro,
   BoxButtons,
   Button,
+  HomeImage,
 } from "../styles/StyledHomePage";
 
 export default function Home() {
@@ -27,10 +28,10 @@ export default function Home() {
     <Container>
       <Logo />
       <BoxImage>
-        <img src={HeadPhonePink} alt="HeadPhonePink" />
-        <img src={HeadPhoneBlue} alt="HeadPhoneBlue" />
-        <img src={HeadPhoneYellow} alt="HeadPhoneYellow" />
-        <img src={HeadPhoneGreen} alt="HeadPhoneGreen" />
+        <HomeImage src={HeadPhonePink} alt="HeadPhonePink" />
+        <HomeImage src={HeadPhoneBlue} alt="HeadPhoneBlue" />
+        <HomeImage src={HeadPhoneYellow} alt="HeadPhoneYellow" />
+        <HomeImage src={HeadPhoneGreen} alt="HeadPhoneGreen" />
       </BoxImage>
       <BoxIntro>
         <TextIntro>
