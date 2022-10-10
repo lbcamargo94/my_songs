@@ -11,15 +11,8 @@ import {
 } from "../helpers/ValidationFormsRegister";
 
 // import styled component
-import {
-  Button,
-  Content,
-  FormsInput,
-  FormsLabel,
-  InputGroup,
-  Link,
-  Text,
-} from "../styles/StyledFormsRegister";
+import Input from "./Input";
+import { Button, Content, Link, Text } from "../styles/StyledFormsRegister";
 import { useUpdateContext } from "../utils/provider";
 
 export default function FormsRegister() {
@@ -82,49 +75,37 @@ export default function FormsRegister() {
   return (
     <Content>
       {/* input First Name */}
-      <InputGroup>
-        <FormsInput
-          required=""
-          type="text"
-          name="first_name"
-          autocomplete="off"
-          onChange={({ target }) => setFirstName(target.value)}
-        />
-        <FormsLabel>First Name *</FormsLabel>
-      </InputGroup>
+      <Input
+        inputType="text"
+        inputName="last_name"
+        inputAutocomplete="off"
+        inputOnChange={({ target }) => setFirstName(target.value)}
+        textLabel="First Name *"
+      />
       {/* input Last Name */}
-      <InputGroup>
-        <FormsInput
-          required=""
-          ype="text"
-          name="last_name"
-          autocomplete="off"
-          onChange={({ target }) => setLastName(target.value)}
-        />
-        <FormsLabel>Last Name</FormsLabel>
-      </InputGroup>
+      <Input
+        inputType="text"
+        inputName="last_name"
+        inputAutocomplete="off"
+        inputOnChange={({ target }) => setLastName(target.value)}
+        textLabel="Last Name"
+      />
       {/* input Email addres */}
-      <InputGroup>
-        <FormsInput
-          required=""
-          type="email"
-          name="email"
-          autocomplete="off"
-          onChange={({ target }) => setEmail(target.value)}
-        />
-        <FormsLabel>E-mail addres *</FormsLabel>
-      </InputGroup>
+      <Input
+        inputType="email"
+        inputName="email"
+        inputAutocomplete="off"
+        inputOnChange={({ target }) => setEmail(target.value)}
+        textLabel="E-mail addres *"
+      />
       {/* input Password */}
-      <InputGroup>
-        <FormsInput
-          required=""
-          type="password"
-          name="password"
-          autocomplete="off"
-          onChange={({ target }) => setPassword(target.value)}
-        />
-        <FormsLabel>Password *</FormsLabel>
-      </InputGroup>
+      <Input
+        inputType="password"
+        inputName="password"
+        inputAutocomplete="off"
+        inputOnChange={({ target }) => setPassword(target.value)}
+        textLabel="Password *"
+      />
       {!validForms && <Text textColor="red"> {alertMessage} </Text>}
       {/* button Sign Up */}
       <Button onClick={() => handleSubmit()}>Sign Up</Button>

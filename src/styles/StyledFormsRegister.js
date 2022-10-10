@@ -23,27 +23,17 @@ export const FormsInput = styled.input`
   font-size: 1rem;
   margin: 1rem;
   padding: 1rem;
-
-  &:focus,
-  &:valid {
-    border: 1.5px solid #f0f8ff;
-    outline: none;
-  }
-
-  &:focus ~ label,
-  &:valid ~ label {
-    background-color: #1a202c;
-    color: #4de649;
-    padding: 0.5rem;
-    margin: 1rem;
-    border-radius: 0.5rem;
-    transform: translateY(-50%) translateX(-15%) scale(0.8);
-    border: 1.5px solid #f0f8ff;
-  }
+  outline: none;
 `;
 
 export const FormsLabel = styled.label`
-  color: #f0f8ff;
+  background-color: #1a202c;
+  color: #4de649;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  transform: translateY(-50%) translateX(-15%) scale(0.8);
+  border: 1.5px solid #f0f8ff;
   left: 15px;
   position: absolute;
 `;
