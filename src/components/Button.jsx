@@ -1,6 +1,6 @@
 import React from "react";
 import { PropTypes } from "prop-types";
-import { PrimaryButton } from "../styles/Button";
+import { PrimaryButton } from "../styles/components/Button";
 
 export default function Button(props) {
   const { buttonType, buttonText, buttonOnClick } = props;

@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   html{
     background-color: #1a202c;
     color: #f0f8ff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
     width: 100%;
   }

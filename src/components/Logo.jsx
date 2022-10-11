@@ -1,7 +1,7 @@
 import React from "react";
 
 // import styled component
-import { Box, TextPrimary } from "../styles/StyledLogo";
+import { Box, TextPrimary } from "../styles/components/Logo";
 
 export default function Logo() {
   return (

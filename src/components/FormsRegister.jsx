@@ -12,8 +12,9 @@ import {
 
 // import styled component
 import Input from "./Input";
-import { Content, Link, Text } from "../styles/StyledFormsRegister";
+import { Content, Link } from "../styles/components/FormsRegister";
 import { useUpdateContext } from "../utils/provider";
+import { Text } from "../styles/components/Text";
 import Button from "./Button";
 
 export default function FormsRegister() {
@@ -111,7 +112,7 @@ export default function FormsRegister() {
       {/* button Sign Up */}
       <Button
         buttonType="button"
-        buttonText="Sign Up"
+        buttonText="Register"
         buttonOnClick={() => handleSubmit()}
       />
       {/* span */}

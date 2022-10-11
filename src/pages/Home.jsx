@@ -19,7 +19,7 @@ import {
   BoxButtons,
   Button,
   HomeImage,
-} from "../styles/StyledHomePage";
+} from "../styles/page/HomePage";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -41,8 +41,8 @@ export default function Home() {
         </TextIntro>
       </BoxIntro>
       <BoxButtons>
-        <Button onClick={() => navigate("/login")}>Sign In</Button>
-        <Button onClick={() => navigate("/register")}>Sign Up</Button>
+        <Button onClick={() => navigate("/login")}>Login</Button>
+        <Button onClick={() => navigate("/register")}>Register</Button>
       </BoxButtons>
     </Container>
   );
