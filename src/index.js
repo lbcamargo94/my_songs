@@ -1,8 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// import Aplication
+import App from "./App";
+
+// import Provider
+import { TunesProvider } from "./utils/provider";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <TunesProvider>
     <App />
+  </TunesProvider>,
 );

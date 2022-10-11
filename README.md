@@ -6,7 +6,7 @@
 <!-- ========== Demonstration ========== -->
 <h2>🚀 Demo</h2>
 
-[URL\_DEMO](URL_DEMO)
+[URL_DEMO](URL_DEMO)
 
 <!-- ========== Screenshots ========== -->
 <h2>Project Screenshots:</h2>
@@ -24,10 +24,10 @@
 
 Here're some of the project's best features:
 
-* under development
-* under development
-* under development
-* under development
+- under development
+- under development
+- under development
+- under development
 
 <!-- ========== Installation ========== -->
 <h2>🛠️ Installation Steps:</h2>
@@ -37,6 +37,7 @@ Here're some of the project's best features:
 ```
 npm install
 ```
+
 <!-- ========== Contribution ========== -->
 <h2>🍰 Contribution Guidelines:</h2>
 
@@ -45,11 +46,11 @@ npm install
 
 Technologies used in the project:
 
-* React.js
-* React Router Dom v6
-* Styled-Components
-* Axios
-* Eslint
+- React.js
+- React Router Dom v6
+- Styled-Components
+- Axios
+- Eslint
 
 <!-- ========== License ========== -->
 <h2>🛡️ License:</h2>
@@ -63,7 +64,7 @@ This project is for study purposes too, so send me an email telling me what you 
 
 All kinds of contributions are very welcome and appreciated!
 
-* ✨ Star the project
-* 🐛 Find and report issues
-* 📝 Submit PRs to help solve issues or add features
-* ✅ Influence with feature requests
+- ✨ Star the project
+- 🐛 Find and report issues
+- 📝 Submit PRs to help solve issues or add features
+- ✅ Influence with feature requests
