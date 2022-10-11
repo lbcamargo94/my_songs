@@ -1,5 +1,5 @@
 <!-- ========== Title ========== -->
-<h1 align="center" id="title">Tunes Sound</h1>
+<h1 align="center" id="title">My Songs</h1>
 
 <p align="center"><img src="https://socialify.git.ci/lbcamargo94/tunes-sound/image?font=Inter&amp;forks=1&amp;issues=1&amp;language=1&amp;owner=1&amp;pattern=Brick%20Wall&amp;pulls=1&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
