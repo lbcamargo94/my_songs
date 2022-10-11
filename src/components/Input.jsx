@@ -1,10 +1,6 @@
 import React from "react";
 import { PropTypes } from "prop-types";
-import {
-  FormsInput,
-  FormsLabel,
-  InputGroup,
-} from "../styles/StyledFormsRegister";
+import { FormsInput, FormsLabel, InputGroup } from "../styles/Input";
 
 export default function Input(props) {
   const { inputType, inputName, inputAutocomplete, inputOnChange, textLabel } =

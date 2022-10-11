@@ -12,8 +12,9 @@ import {
 
 // import styled component
 import Input from "./Input";
-import { Button, Content, Link, Text } from "../styles/StyledFormsRegister";
+import { Content, Link, Text } from "../styles/StyledFormsRegister";
 import { useUpdateContext } from "../utils/provider";
+import Button from "./Button";
 
 export default function FormsRegister() {
   // States
@@ -108,7 +109,11 @@ export default function FormsRegister() {
       />
       {!validForms && <Text textColor="red"> {alertMessage} </Text>}
       {/* button Sign Up */}
-      <Button onClick={() => handleSubmit()}>Sign Up</Button>
+      <Button
+        buttonType="button"
+        buttonText="Sign Up"
+        buttonOnClick={() => handleSubmit()}
+      />
       {/* span */}
       <Text textColor="white">
         Already a user?
