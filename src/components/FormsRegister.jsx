@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 
-// import context/provider
+// import react-router-dom
 import { useNavigate } from "react-router-dom";
 
-// Import forms validation
+// import context/provider
+import { useUpdateContext } from "../utils/provider";
+
+// import forms validation
 import {
   emailValidation,
   passwordValidation,
@@ -11,10 +14,11 @@ import {
 } from "../helpers/ValidationFormsRegister";
 
 // import styled component
-import Input from "./Input";
 import { Content, Link } from "../styles/components/FormsRegister";
-import { useUpdateContext } from "../utils/provider";
 import { Text } from "../styles/components/Text";
+
+// import Component
+import Input from "./Input";
 import Button from "./Button";
 
 export default function FormsRegister() {
@@ -26,7 +30,7 @@ export default function FormsRegister() {
   const [alertMessage, setAlertMessage] = useState("");
   const [validForms, setValidForms] = useState(false);
 
-  // React Touter Dom useNavigate
+  // React Router Dom useNavigate
   const navigate = useNavigate();
 
   // Save newUser in Context

@@ -11,9 +11,11 @@ export const PrimaryButton = styled.button`
   font-size: 1em;
   font-weight: 900;
   height: 2.5rem;
+  justify-content: center;
   letter-spacing: 0.15em;
   margin: 1rem;
   padding: 0.5rem 1rem;
+  text-align: center;
   transition-duration: 1s;
   transition-property: border-top, border-left, border-bottom, border-right,
     box-shadow;
