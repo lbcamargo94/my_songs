@@ -21,6 +21,7 @@
     "import/prefer-default-export": "off",
     "jsx-quotes": ["error", "prefer-double"],
     "no-shadow": "off",
+    "no-console": "off",
     "prefer-arrow-callback": "off",
     "prettier/prettier": "error",
     "quotes": ["error", "double"],

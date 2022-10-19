@@ -15,4 +15,5 @@ export const Link = styled.a`
   margin: 1rem;
   /* Blue Azure */
   color: #007fff;
+  cursor: pointer;
 `;

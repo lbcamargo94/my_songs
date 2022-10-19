@@ -11,10 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap" rel="stylesheet">
 
+    
     <title>React App - My Musics</title>
   </head>
   <body>
     <div id="root"></div>
-
+    <!-- Desser Developer API -->
+    <!-- initializes the JavaScript SDK in your page. -->
+    <div id="dz-root"></div>
+    <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+    <script>
+      window.dzAsyncInit = function() {
+      DZ.init({
+        appId  : '563402',
+        channelUrl : 'http://tunes-sound.vercel.app/channel.html'
+      });
+      };
+      (function() {
+      var e = document.createElement('script');
+      e.src = 'https://e-cdns-files.dzcdn.net/js/min/dz.js';
+      e.async = true;
+      document.getElementById('dz-root').appendChild(e);
+      }());
+    </script>
   </body>
 </html>
