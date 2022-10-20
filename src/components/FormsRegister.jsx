@@ -33,7 +33,7 @@ export default function FormsRegister() {
   // React Router Dom useNavigate
   const navigate = useNavigate();
 
-  // Save newUser in Context
+  // Context
   const { data, setData } = useUpdateContext();
 
   // Function to add a new user

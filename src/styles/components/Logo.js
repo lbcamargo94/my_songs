@@ -3,9 +3,7 @@ import styled from "styled-components";
 export const Box = styled.div`
   align-items: center;
   display: flex;
-  margin: 2rem auto;
   justify-content: center;
-  width: 100%;
 `;
 
 export const TextPrimary = styled.h1`

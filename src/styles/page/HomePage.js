@@ -6,16 +6,9 @@ export const Container = styled.section`
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  max-width: 600px;
+  max-width: 1200px;
   width: 100%;
-`;
-
-export const BoxLogo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  height: 10rem;
+  padding: 1rem;
 `;
 
 export const BoxImage = styled.div`
@@ -25,12 +18,14 @@ export const BoxImage = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem;
+  margin: 2rem;
   width: 80%;
+  max-height: 600px;
 `;
 
 export const HomeImage = styled.img`
   max-width: 50%;
+  max-height: 13rem;
 `;
 
 export const BoxIntro = styled.div`
@@ -39,8 +34,7 @@ export const BoxIntro = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-betwen;
-  margin-top: 3rem;
-  margin: 1rem 0;
+  margin: 0;
   max-width: 90%;
   min-height: 200px;
   padding: 1rem;

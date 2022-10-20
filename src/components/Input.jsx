@@ -1,5 +1,10 @@
+// import React
 import React from "react";
+
+// import PropTypes
 import { PropTypes } from "prop-types";
+
+// import Styles
 import { FormsInput, FormsLabel, InputGroup } from "../styles/components/Input";
 
 export default function Input(props) {
