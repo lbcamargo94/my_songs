@@ -26,7 +26,6 @@ export default function Search() {
 
   return (
     <Container>
-      <h1>Search Page</h1>
       <Header />
       <InputSearch
         inputType="text"

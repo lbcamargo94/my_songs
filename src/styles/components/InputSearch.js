@@ -35,4 +35,7 @@ export const ButtonSearch = styled.button`
     color: #01a101;
     background-color: #f5f5f5;
   }
+  :active {
+    transform: translateY(0.125rem);
+  }
 `;

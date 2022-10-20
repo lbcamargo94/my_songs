@@ -1,21 +1,24 @@
 // imports react
 import React from "react";
-import Avatar from "./Avatar";
+
+// imports styles
+import { Box, Container } from "../styles/components/Header";
 
 // imports componentes
+import Avatar from "./Avatar";
 import Logo from "./Logo";
 import MenuBar from "./MenuBar";
 
 export default function Header() {
   return (
-    <section>
-      <div>
+    <Container>
+      <Box>
         <Logo />
         <Avatar />
-      </div>
-      <div>
+      </Box>
+      <Box>
         <MenuBar />
-      </div>
-    </section>
+      </Box>
+    </Container>
   );
 }
