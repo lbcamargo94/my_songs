@@ -1,4 +1,7 @@
+// imposrt React
 import React from "react";
+
+// import Style
 import {
   BoxLetters,
   BoxSoundBar,
