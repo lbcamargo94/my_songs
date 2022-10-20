@@ -8,6 +8,7 @@ import InputSearch from "../components/InputSearch";
 
 // Request API import
 import { getSearchAPI } from "../services/musicsAPI";
+import Header from "../components/Header";
 
 export default function Search() {
   // States App
@@ -26,6 +27,7 @@ export default function Search() {
   return (
     <Container>
       <h1>Search Page</h1>
+      <Header />
       <InputSearch
         inputType="text"
         inputName="search"
