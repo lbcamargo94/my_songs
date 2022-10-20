@@ -1,15 +1,17 @@
-// React Imports
+// import React
 import React, { useState } from "react";
 
-// Components Imports
+// import components
 import Loading from "../components/Loading";
-import { Container, MusicBox } from "../styles/page/Search";
 import InputSearch from "../components/InputSearch";
-
-// Request API import
-import { getSearchAPI } from "../services/musicsAPI";
 import Header from "../components/Header";
 import MusicCard from "../components/MusicCard";
+
+// import request API
+import { getSearchAPI } from "../services/musicsAPI";
+
+// import styled
+import { Container, MusicBox, TextAlert } from "../styles/page/Search";
 
 export default function Search() {
   // States App
@@ -21,15 +23,21 @@ export default function Search() {
   // Request music API
   async function searchMusics(search, query) {
     setLoading(true);
-    const result = await getSearchAPI(search, query);
-    setMusics(result);
+    if (inputSearch !== "") {
+      const result = await getSearchAPI(search, query);
+      setMusics(result);
+    }
     setLoading(false);
   }
 
   // Render music cards
   function renderMusicCard(musics) {
     if (!musics && musics === "") {
-      return "";
+      return (
+        <TextAlert>
+          Type and search for the name of an album, an artist or a song.
+        </TextAlert>
+      );
     }
     return musics.data.map((index) => (
       <MusicCard
@@ -39,7 +47,6 @@ export default function Search() {
         artistId={index.artist.id}
         artistName={index.artist.name}
         artistPicture={index.artist.picture}
-        musicId={index.id}
         musicPreview={index.preview}
         musicTitle={index.title_short}
       />

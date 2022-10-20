@@ -4,6 +4,23 @@ import React from "react";
 // import PropTypes
 import { PropTypes } from "prop-types";
 
+// import styled
+import {
+  AlbumImage,
+  AlbumTitle,
+  ArtistId,
+  ArtistImage,
+  ArtistName,
+  ArtistTitle,
+  BoxAlbum,
+  BoxArtist,
+  BoxMusic,
+  ContainerCard,
+  MusicName,
+  MusicPlayer,
+  MusicTrack,
+} from "../styles/components/MusicCard";
+
 export default function MusicCard(props) {
   const {
     albumCover,
@@ -11,34 +28,35 @@ export default function MusicCard(props) {
     artistId,
     artistName,
     artistPicture,
-    musicId,
     musicPreview,
     musicTitle,
   } = props;
+
   return (
-    <section>
-      <div>
-        <h1>{albumTitle}</h1>
-        <img src={albumCover} alt="album_cover" />
-      </div>
-      <div>
-        <div>
-          <h1>{artistName}</h1>
-          <h1>{artistId}</h1>
-        </div>
-        <img src={artistPicture} alt="artist_picture" />
-      </div>
-      <div>
-        <div>
-          <h1>{musicTitle}</h1>
-          <h1>{musicId}</h1>
-        </div>
-        <audio type="audio/mpeg" src={musicPreview} controls preload="auto">
-          <track kind="captions" />
-        </audio>
-        {/* <iframe src={musicPreview} title="music_player" /> */}
-      </div>
-    </section>
+    <ContainerCard>
+      <BoxAlbum>
+        <AlbumImage src={albumCover} alt="album_cover" />
+        <AlbumTitle>{`Album Title: ${albumTitle}`}</AlbumTitle>
+      </BoxAlbum>
+      <BoxArtist>
+        <ArtistImage src={artistPicture} alt="artist_picture" />
+        <ArtistTitle>
+          <ArtistId>{`Artist Id: ${artistId}`}</ArtistId>
+          <ArtistName>{`Artist Name: ${artistName}`}</ArtistName>
+        </ArtistTitle>
+      </BoxArtist>
+      <BoxMusic>
+        <MusicName>{`Music Title: ${musicTitle}`}</MusicName>
+        <MusicPlayer
+          type="audio/mpeg"
+          src={musicPreview}
+          controls
+          preload="auto"
+        >
+          <MusicTrack kind="captions" />
+        </MusicPlayer>
+      </BoxMusic>
+    </ContainerCard>
   );
 }
 

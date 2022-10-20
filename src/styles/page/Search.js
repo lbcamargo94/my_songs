@@ -4,18 +4,31 @@ export const Container = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: start;
   max-width: 1200px;
+  padding: 0 1rem;
+  height: 100%;
   width: 100%;
-  padding: 1rem;
+  box-sizing: border-box;
 `;
 
 export const MusicBox = styled.div`
-  background-color: #f0f8ff;
-  width: 100%;
-  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff30;
+  border-radius: 0.5rem;
   border: none;
-  border-radius: 1rem;
+  max-width: 1200px;
   padding: 1rem;
+  width: 100%;
+`;
+
+export const TextAlert = styled.span`
+  color: #242124;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  font-weight: 900;
 `;
